@@ -1,5 +1,6 @@
 window.onload = function(){
 
+alert ("Bienvenidos!")
 
 
 
@@ -28,5 +29,5 @@ window.onload = function(){
 
 
 
-  
+
 }
