@@ -37,3 +37,35 @@
   overflow: hidden;
   background-color: #FFD740;
 }
+
+body {
+  background-color: #ECEFF1
+}
+
+.logoTMDb{
+width: 40%;
+opacity: 0.8;
+align-items: center;
+}
+footer {
+  background-color: #FFD740;
+  overflow: hidden;
+  bottom: 0;
+  height: 120px;
+  position: absolute;
+  width: 100%
+}
+footer ul {
+  width: 100%;
+}
+footer ul li {
+
+  float: left;
+  padding: 15px;
+  width: 15%;
+
+}
+footer a {
+text-decoration: none;
+color: grey;
+}
