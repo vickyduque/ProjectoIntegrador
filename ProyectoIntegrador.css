@@ -3,21 +3,25 @@
 }
 
 .botonGenero{
-  width: 10%;
-  height: 10%;
+  margin-left: 40%;
+  width:11%;
+  height:8%;
+  border-radius: 160px;
+  line-height:80px;
+  text-align: center;
+  font-size: 15px;
   font-family: 'Bitter', serif;
-  margin-left: 20%;
-  margin-right: 2%;
-
+  background-color: #CFD8DC;
+  border-color: #B0BEC5;
+  margin-top: 3%;
+  position: absolute;
 }
-
-.botonEnviar{
+.textoBuscador{
+  position: absolute;
+  top: 10%;
+  left: 70%;
   width: 10%;
-  height: 10%;
-  font-family: 'Bitter', serif;
-  margin-left: 1%;
-  padding-bottom: 10%;
-  
+  height: 3%;
 }
 
 .botonLogin{
@@ -31,6 +35,14 @@
   margin-top: 2%;
   background-color: #CFD8DC;
   border-color: #B0BEC5;
+  font-size: 15px;
+}
+
+.lupa{
+  width: 2%;
+  position: absolute;
+  top: 10%;
+  left: 81%;
 }
 
 .header{
