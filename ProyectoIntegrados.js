@@ -15,8 +15,8 @@ window.onload = function(){
         var title = arrayPeliculas[i].title
         var poster = arrayPeliculas[i].poster_path
 
-        document.querySelector("div").innerHTML += "<p><a href=detallePeliculas.html?id=" + id + ">" + title + "</a></p>"
-        document.querySelector("div").innerHTML += "<img src=" + poster+ ">"
+        
+        document.querySelector("div.peliculas").innerHTML += "<img src=https://image.tmdb.org/t/p/w500" + poster+ ">"
       }
 
     })
