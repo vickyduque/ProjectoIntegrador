@@ -1,3 +1,11 @@
+header {
+  margin-bottom: 50px;
+}
+
+footer {
+  margin-top: 50px;
+}
+
 .logo{
   width: 10%
 }
@@ -68,7 +76,7 @@ footer {
   overflow: hidden;
   bottom: 0;
   height: 120px;
-  
+
   width: 100%
 }
 footer ul {
@@ -104,4 +112,29 @@ top: 10px;
 footer a {
 text-decoration: none;
 color: grey;
+}
+
+.uk-h3 {
+text-align: center;
+}
+
+
+div h1 {
+font-family: 'Anton', sans-serif;
+font-size: 60px;
+}
+
+div h1:hover {
+color: #FFD740
+}
+
+/* .uk-position-center-left{
+  width: 50px;
+  height: 80px;
+} */
+
+
+a svg {
+width: 150px;
+height: 150px;
 }
