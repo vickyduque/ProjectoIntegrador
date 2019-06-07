@@ -4,11 +4,22 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="ProyectoIntegrador.css">
     <title></title>
+
+    <!-- Link a google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/css/uikit.min.css" />
+
+    <!-- UIkit JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit-icons.min.js"></script>
+
   </head>
 
 
   <body>
 
+<!-- Header-->
       <header>
         <div class="header">
           <img src="logo.jpg" alt="" class="logo">
@@ -18,9 +29,66 @@
           <input class= "botonLogin" type="submit" name="" value="LOGIN">
         </div>
       </header>
-    <div class="peliculas">
 
+<!-- Header-->
+
+<!-- Carrousel de películas populares -->
+      <div class="Most Popular">
+      <div class="uk-h3">
+        <h1> Most popular </h1>
+      </div>
+      <div class="uk-position-relative uk-visible-toggle uk-dark" tabindex="-1" uk-slideshow="animation: fade; autoplay: true; autoplay-interval: 1000;pause-on-hover: true">
+
+          <ul class="uk-slideshow-items" id="popular"></ul>
+
+          <a class="uk-position-center-left uk-position-small uk-hidden-hover" id="nextPrevious" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+          <a class="uk-position-center-right uk-position-small uk-hidden-hover" id="nextPrevious" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+
+      </div>
     </div>
+
+<!-- Termina el carrousel de películas populares -->
+
+<!-- Carrousel de películas con mayor puntaje -->
+
+<div class="Top Rated" >
+<div class="uk-h3">
+  <h1> Top Rated </h1>
+</div>
+<div class="uk-position-relative uk-visible-toggle uk-dark" tabindex="-1" uk-slideshow="animation: fade; autoplay: true; autoplay-interval: 1000;pause-on-hover: true">
+
+    <ul class="uk-slideshow-items" id="top"></ul>
+
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+
+</div>
+</div>
+
+<!-- Termina el carrousel de películas con mayor puntaje -->
+
+<!-- Carrousel de películas a estrenar -->
+
+<div class="Upcoming" >
+<div class="uk-h3">
+  <h1> Coming soon... </h1>
+</div>
+<div class="uk-position-relative uk-visible-toggle uk-dark" tabindex="-1" uk-slideshow="animation: fade; autoplay: true; autoplay-interval: 1000;pause-on-hover: true">
+
+    <ul class="uk-slideshow-items" id="upcoming"></ul>
+
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+
+</div>
+</div>
+
+<!-- Termina el carrousel de películas a estrenar -->
+
+
+
+<!-- Footer-->
+
     <footer>
         <ul class="ul-menu" type="none">
             <li class="li"> <a href="https://www.themoviedb.org/?language=es" </a>  <img src="logoTMDb.png" alt="" class="logoTMDb"> </li>
@@ -31,6 +99,8 @@
         </ul>
         </div>
     </footer>
+
+<!-- Footer-->
   </body>
 </html>
 <script type="text/javascript" src="ProyectoIntegrados.js"></script>
