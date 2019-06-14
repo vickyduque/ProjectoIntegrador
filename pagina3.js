@@ -13,7 +13,7 @@ window.onload =function(){
       for (var i = 0; i < generosId.length; i++) {
         var id = generosId[i].genre_id
 
-        document.querySelector("div.genero").innerHTML += "<a href= https://api.themoviedb.org/3/discover/movie?api_key=d6ff71a6bd2a94eaac5b986a9112d505&sort_by=popularity.desc&include_adult=true&include_video=true&page=1&with_genres=" + genre_id + "> </a>"
+        document.querySelector("div.genero").innerHTML += "<a href= pagina3.html?id=" + genre_id + "> </a>"
 
     }
     })
