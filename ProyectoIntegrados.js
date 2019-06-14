@@ -105,6 +105,4 @@ console.log("https://image.tmdb.org/t/p/w500" + poster);
 
 
 
-
-
 }
