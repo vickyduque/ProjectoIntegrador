@@ -1,19 +1,30 @@
 window.onload =function(){
+  var parametrosDeBusqueda = new URLSearchParams(window.location.search)
+  var idDeGenero = parametrosDeBusqueda.get("idDeGenero")
+  console.log(idDeGenero);
+  var nombreDeGenero = parametrosDeBusqueda.get("nombreDeGenero")
+  console.log(nombreDeGenero);
+ document.querySelector("p.nombreG").innerHTML += "<p> " + nombreDeGenero + " </p>"
 
-  fetch("https://api.themoviedb.org/3/discover/movie?api_key=d6ff71a6bd2a94eaac5b986a9112d505&sort_by=popularity.desc&include_adult=true&include_video=true&page=1&with_genres=18")
+  fetch("https://api.themoviedb.org/3/discover/movie?api_key=d6ff71a6bd2a94eaac5b986a9112d505&sort_by=popularity.desc&include_adult=true&include_video=true&page=1&with_genres="+idDeGenero)
     .then(function(respuesta) {
       return respuesta.json()
     })
     .then(function(informacion) {
       console.log(informacion);
 
-      var generosId= informacion.genre_id
-      console.log(generosId);
+      var arrayPeliculasPorGenero= informacion.results
+      console.log(arrayPeliculasPorGenero);
 
-      for (var i = 0; i < generosId.length; i++) {
-        var id = generosId[i].genre_id
+      for (var i = 0; i < arrayPeliculasPorGenero.length; i++) {
 
-        document.querySelector("div.genero").innerHTML += "<a href= https://api.themoviedb.org/3/discover/movie?api_key=d6ff71a6bd2a94eaac5b986a9112d505&sort_by=popularity.desc&include_adult=true&include_video=true&page=1&with_genres=" + genre_id + "> </a>"
+        var id = arrayPeliculasPorGenero[i].id
+        var title = arrayPeliculasPorGenero[i].title
+        var poster = arrayPeliculasPorGenero[i].poster_path
+        document.querySelector("ul#genero").innerHTML += "<li> <img class=uk-align-center src=https://image.tmdb.org/t/p/w500" + poster + " 'uk-cover'> </li>"
+
+
+
 
     }
     })

@@ -1,0 +1,29 @@
+body {
+  background-color: #ECEFF1
+}
+
+p.nombreG{
+  font-family: 'Anton', sans-serif;
+  font-size: 70px;
+  text-align: center;
+}
+
+p.nombreG:hover {
+color: #FFD740
+}
+
+
+a svg {
+width: 120px;
+height: 120px;
+}
+
+.uk-align-center{
+  height: 650px;
+  width: 450px;
+}
+
+.uk-align-center:hover{
+  height: 700px;
+  width: 500px;
+}
