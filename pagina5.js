@@ -19,9 +19,9 @@ var idPelicula = new URLSearchParams (window.location.search).get ("idPelicula")
         var titulo = detallesPeliculas.original_title
 
         var arrayDeGeneros = detallesPeliculas.genres
-        var genero = "";
+        var genero = " -";
         for (var i = 0; i < arrayDeGeneros.length; i++) {
-          genero += arrayDeGeneros[i].name
+          genero += arrayDeGeneros[i].name + " "
         }
 
         var idioma = detallesPeliculas.original_language
@@ -30,7 +30,7 @@ var idPelicula = new URLSearchParams (window.location.search).get ("idPelicula")
         var poster = "https://image.tmdb.org/t/p/w500" + detallesPeliculas.poster_path
 
 
-        document.querySelector(".detalle").innerHTML+= "<p>"+ titulo + "</p>" + "<p>"+ genero + "</p>" + "<p>"+ idioma + "</p>" +  "<p>"+ sinopsis + "</p>" + "<p>"+ estreno + "</p>" + "<img class=uk-align-center src=" + poster + " 'uk-cover'>"
+        document.querySelector(".detalle").innerHTML+= "<p class='titulo'>"+ titulo + "</p>" + "<p class='genero'>"+ genero + "</p>" + "<p class='idioma'>"+ "-Language: " +idioma + "</p>" + "<p class='estreno'>"+"-"+ estreno + "</p>" + "<p class='sinopsis'>"+ sinopsis + "</p>"  + "<img class=uk-align-center src=" + poster + " 'uk-cover'>"
 
     })
     .catch(function(error) {
@@ -56,25 +56,26 @@ var idPelicula = new URLSearchParams (window.location.search).get ("idPelicula")
     })
 
 //nuevo fetch para las recomendaciones
-     // fetch("https://api.themoviedb.org/3/movie/" + idPelicula + "/recommendations?api_key=d6ff71a6bd2a94eaac5b986a9112d505&language=en-US&page=1")
-     //    .then (function(response) {
-     //      return response.json();
-     //    })
-     //    .then (function(information){
-     //      console.log(information);
-     //      console.log(information.results);
-     //      var arrayDePeliculas = information.results
-     //
-     //     for (var i = 0; i < arrayDePeliculas.length; i++) {
-     //        var id = arrayDePeliculas[i].id
-     //        var title = arrayDePeliculas[i].title
-     //        var poster = arrayDePeliculas[i].poster_path
-     //
-     //  })
-     //
-     //  .catch(function(error){
-     //    console.log("There was na error: " + error);
-     //  })
+     fetch("https://api.themoviedb.org/3/movie/" + idPelicula + "/recommendations?api_key=d6ff71a6bd2a94eaac5b986a9112d505&page=1")
+        .then (function(response) {
+          return response.json();
+        })
+        .then (function(information){
+          console.log(information);
+          console.log(information.results);
+          var arrayDePeliculas = information.results
+
+         for (var i = 0; i < arrayDePeliculas.length; i++) {
+            var id = arrayDePeliculas[i].id
+            var poster = arrayDePeliculas[i].poster_path
+            document.querySelector("ul#popular").innerHTML += "<p><a href='pagina5.html?idPelicula="+id+"'> <img class=uk-align-center src=https://image.tmdb.org/t/p/w500" + poster + " 'uk-cover'> </a></p>"
+      }
+    })
+
+
+      .catch(function(error){
+        console.log("There was na error: " + error);
+      })
 
 
 

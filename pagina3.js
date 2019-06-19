@@ -21,7 +21,7 @@ window.onload =function(){
         var id = arrayPeliculasPorGenero[i].id
         var title = arrayPeliculasPorGenero[i].title
         var poster = arrayPeliculasPorGenero[i].poster_path
-        document.querySelector("ul#genero").innerHTML += "<li> <img class=uk-align-center src=https://image.tmdb.org/t/p/w500" + poster + " 'uk-cover'> </li>"
+        document.querySelector("ul#genero").innerHTML += "<li> <a href='pagina5.html?idPelicula="+ id+ "'> <img class=uk-align-center src=https://image.tmdb.org/t/p/w500" + poster + " 'uk-cover'> </a> </li>"
 
 
 

@@ -17,7 +17,7 @@ window.onload=function (){
     var id = generos[i].id
     var nombre = generos[i].name
 
-    document.querySelector("#generos").innerHTML += "<a class=uk-text-center href=pagina3.html?idDeGenero=" + id + "&nombreDeGenero="+nombre+">" + nombre + "</a><br>"
+    document.querySelector("#generos").innerHTML += "<a class=uk-text-center href=pagina3.html?idDeGenero=" + id + "&nombreDeGenero="+nombre+">" + nombre + "</a>"
   }
 })
 
@@ -25,6 +25,6 @@ window.onload=function (){
    console.log("Error: " + error);
       })
 
-    }
+}
   //var idgenero = new URLSearchParams (location.search).get ("id")
   //"<a class=uk-text-center href=pagina2.html?id=" + idgenero +"</a>"
