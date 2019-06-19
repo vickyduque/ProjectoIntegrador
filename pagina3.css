@@ -9,13 +9,18 @@ p.nombreG{
 }
 
 p.nombreG:hover {
-color: #FFD740
+color: #FFD740;
+}
+
+p.nombreG{
+text-decoration: underline;
 }
 
 
 a svg {
 width: 120px;
 height: 120px;
+
 }
 
 .uk-align-center{
@@ -26,4 +31,5 @@ height: 120px;
 .uk-align-center:hover{
   height: 700px;
   width: 500px;
+
 }

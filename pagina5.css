@@ -1,0 +1,9 @@
+div.detalle{
+  overflow: hidden;
+}
+
+img.uk-align-center {
+  float: left;
+  width: 350px;
+  height: 450px;
+}

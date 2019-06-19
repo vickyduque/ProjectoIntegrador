@@ -8,7 +8,7 @@ window.onload = function(){
     })
     .then(function(informacion) {
       console.log(informacion);
-console.log("popular");
+    console.log("popular");
       var arrayPeliculas = informacion.results
       console.log(arrayPeliculas);
 
@@ -17,7 +17,7 @@ console.log("popular");
         var title = arrayPeliculas[i].title
         var poster = arrayPeliculas[i].poster_path
 
-        document.querySelector("ul#popular").innerHTML += "<li> <img class=uk-align-center src=https://image.tmdb.org/t/p/w500" + poster + " 'uk-cover'> </li>"
+        document.querySelector("ul#popular").innerHTML += "<li> <a href='pagina5.html?idPelicula="+id+"'> <img class=uk-align-center src=https://image.tmdb.org/t/p/w500" + poster + " 'uk-cover'> </a> </li>"
 
       }
 
@@ -43,7 +43,7 @@ console.log("ranking");
           var title = arrayPeliculas[i].title
           var poster = arrayPeliculas[i].poster_path
 
-          document.querySelector("ul#top").innerHTML += "<li> <img class=uk-align-center src=https://image.tmdb.org/t/p/w500" + poster + " 'uk-cover'> </li>"
+          document.querySelector("ul#top").innerHTML += "<li> <a href='pagina5.html?idPelicula="+id+"'> <img class=uk-align-center src=https://image.tmdb.org/t/p/w500" + poster + " 'uk-cover'> </a> </li>"
 
 
         }
@@ -70,7 +70,7 @@ console.log("estrenos");
           var title = arrayPeliculas[i].title
           var poster = arrayPeliculas[i].poster_path
 console.log("https://image.tmdb.org/t/p/w500" + poster);
-          document.querySelector("ul#upcoming").innerHTML += "<li> <img class=uk-align-center src=https://image.tmdb.org/t/p/w500" + poster + " 'uk-cover'> </li>"
+          document.querySelector("ul#upcoming").innerHTML += "<li> <a href='pagina5.html?idPelicula="+id+"'> <img class=uk-align-center src=https://image.tmdb.org/t/p/w500" + poster + " 'uk-cover'> </a> </li>"
 
 
         }
