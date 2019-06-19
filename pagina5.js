@@ -56,25 +56,25 @@ var idPelicula = new URLSearchParams (window.location.search).get ("idPelicula")
     })
 
 //nuevo fetch para las recomendaciones
-    // fetch("https://api.themoviedb.org/3/movie/" + idPelicula + "/recommendations?api_key=d6ff71a6bd2a94eaac5b986a9112d505&language=en-US&page=1")
-    //     .then (function(response) {
-    //       return response.json();
-    //     })
-    //     .then (function(information){
-    //       console.log(information);
-    //       console.log(information.results);
-    //       var arrayDePeliculas = information.results
-    //
-    //      for (var i = 0; i < arrayDePeliculas.length; i++) {
-    //         var id = arrayDePeliculas[i].id
-    //         var title = arrayDePeliculas[i].title
-    //         var poster = arrayDePeliculas[i].poster_path
-    //
-    //   })
-    //
-    //   .catch(function(error){
-    //     console.log("There was na error: " + error);
-    //   })
+     // fetch("https://api.themoviedb.org/3/movie/" + idPelicula + "/recommendations?api_key=d6ff71a6bd2a94eaac5b986a9112d505&language=en-US&page=1")
+     //    .then (function(response) {
+     //      return response.json();
+     //    })
+     //    .then (function(information){
+     //      console.log(information);
+     //      console.log(information.results);
+     //      var arrayDePeliculas = information.results
+     //
+     //     for (var i = 0; i < arrayDePeliculas.length; i++) {
+     //        var id = arrayDePeliculas[i].id
+     //        var title = arrayDePeliculas[i].title
+     //        var poster = arrayDePeliculas[i].poster_path
+     //
+     //  })
+     //
+     //  .catch(function(error){
+     //    console.log("There was na error: " + error);
+     //  })
 
 
 
