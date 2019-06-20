@@ -52,7 +52,7 @@ var idPelicula = new URLSearchParams (window.location.search).get ("idPelicula")
         document.querySelector("div.trailer iframe").src += key
     })
     .catch(function(error){
-      console.log("There was na error: " + error);
+      console.log("There was an error: " + error);
     })
 
 //nuevo fetch para las recomendaciones
@@ -74,9 +74,13 @@ var idPelicula = new URLSearchParams (window.location.search).get ("idPelicula")
 
 
       .catch(function(error){
-        console.log("There was na error: " + error);
+        console.log("There was an error: " + error);
       })
 
-
+// RECOMENDACIONES
+    var btn = document.querySelector(".botonRecomendaciones");
+    btn.onclick= function(){
+       document.querySelector("ul#popular.uk-slideshow-items").style.display= "block";
+    }
 
 }
