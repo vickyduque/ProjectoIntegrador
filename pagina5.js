@@ -3,7 +3,7 @@ window.onload= function (){
 var imgPath = "https://image.tmdb.org/t/p/original"
 var idPelicula = new URLSearchParams (window.location.search).get ("idPelicula")
 
-//tengo que poner una variable que tenga todas las pelis porque sino me va a aparecer siempre la misma peli
+//tengo que poner una variable que tenga todas las pelis porque sino me va a aparecer siempre la misma 
   fetch(" https://api.themoviedb.org/3/movie/" + idPelicula + "?api_key=d6ff71a6bd2a94eaac5b986a9112d505&page=1")
     .then(function(respuesta) {
       return respuesta.json()
@@ -68,7 +68,7 @@ var idPelicula = new URLSearchParams (window.location.search).get ("idPelicula")
          for (var i = 0; i < arrayDePeliculas.length; i++) {
             var id = arrayDePeliculas[i].id
             var poster = arrayDePeliculas[i].poster_path
-            document.querySelector("ul#popular").innerHTML += "<p><a href='pagina5.html?idPelicula="+id+"'> <img class=uk-align-center src=https://image.tmdb.org/t/p/w500" + poster + " 'uk-cover'> </a></p>"
+            document.querySelector("ul#popular").innerHTML += "<p><a href='pagina5.html?idPelicula="+id+"'> <img id='poster' class=uk-align-center src=https://image.tmdb.org/t/p/w500" + poster + " 'uk-cover'> </a></p>"
       }
     })
 

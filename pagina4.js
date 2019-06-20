@@ -4,13 +4,15 @@ window.addEventListener("load", function(){
   var buscador = urlSearchParams.get('buscador')
   console.log(buscador);
 
-  fetch("https://api.themoviedb.org/3/search/movie?api_key=d6ff71a6bd2a94eaac5b986a9112d505&query="+buscador+"&page=1")
+
+  fetch("https://api.themoviedb.org/3/search/movie?api_key=d6ff71a6bd2a94eaac5b986a9112d505&query="+ buscador +"&page=1&include_adult=false")
     .then(function(response){
       return response.json();
     })
     .then(function(objetoLiteral) {
       console.log(objetoLiteral);
 
+      var arrayBuscador = objetoLiteral.results
       //GUARDO EL ARRAY DE PELICULAS
       var arrayDePeliculas = objetoLiteral.results
       // CAPTURO EL UL
@@ -30,9 +32,14 @@ window.addEventListener("load", function(){
           li += "</li>"
 
           ul.innerHTML += li
+
+  //en caso de que no se encuentre ningun resultado: 
+          if(arrayBuscador.length <= 0){
+            document.querySelector('ul').innerHTML="<h2> There are no results </h2>"
+          }
       }
     })
-    
+
     .catch(function(error) {
       console.log("the error was: " + error);
     })

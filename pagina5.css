@@ -109,8 +109,12 @@ uk-active uk-transition-active{
   margin-right: auto;
 }
 
+/* Recommendaciones */
 ul#popular.uk-slideshow-items{
   display: none;
+}
+img#poster.uk-align-center {
+  margin: 0px 0px 30px 500px
 }
 
 /* Recommendaciones */

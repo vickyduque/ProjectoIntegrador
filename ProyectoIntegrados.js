@@ -34,7 +34,7 @@ window.onload = function(){
       })
       .then(function(informacion) {
         console.log(informacion);
-console.log("ranking");
+        console.log("ranking");
         var arrayPeliculas = informacion.results
         console.log(arrayPeliculas);
 
@@ -79,28 +79,6 @@ console.log("https://image.tmdb.org/t/p/w500" + poster);
       .catch(function(error) {
         console.log("Error: " + error);
       })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

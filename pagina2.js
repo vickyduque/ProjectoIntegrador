@@ -26,5 +26,3 @@ window.onload=function (){
       })
 
 }
-  //var idgenero = new URLSearchParams (location.search).get ("id")
-  //"<a class=uk-text-center href=pagina2.html?id=" + idgenero +"</a>"
